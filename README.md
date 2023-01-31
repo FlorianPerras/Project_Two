@@ -42,9 +42,21 @@ The project structure is like this:
 
 
 
-## Results<a name="results"></a>
+## Execution <a name="execution"></a>
 
-## Acknowledgements<a name="licensing"></a>
+To run ETL pipeline to clean data and store the processed data in the database execute:
+- python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/disaster_response_db.db
+
+To run the ML pipeline that loads data from DB, trains classifier and saves the model as a pickle file 
+- python models/train_classifier.py data/disaster_response_db.db models/classifier.pkl
+
+Run the following command in the app's directory to run the web app:
+- python run.py
+
+In order to see the web app, open a browser and switch to:
+- http://0.0.0.0:3001/
+
+## Acknowledgements<a name="acknowledgment"></a>
 
 Must give credit to Appen for the data. 
 I also want to thank Udacity for the great introduction!
