@@ -37,10 +37,12 @@ The project structure is like this:
 - ML Pipeline in order to predict categorization
 - Display results on a WebApp using plotly 
 
-
 ## File Descriptions <a name="files"></a>
 
-
+- app/templates/*: templates/html files for web app
+- data/process_data.py: Extract Train Load (ETL) pipeline used for data cleaning, feature extraction, and storing data in a SQLite database
+- models/train_classifier.py: Machine learning pipeline that loads data, trains a model, and saves the trained model as a .pkl file
+- run.py: This file can be used to launch the web app and display
 
 ## Execution <a name="execution"></a>
 
