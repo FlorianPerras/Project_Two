@@ -58,6 +58,9 @@ def clean_data(df):
         # convert column from string to numeric
         categories[column] = categories[column].astype(int)
     
+    # Filter out rows which do not contain a binary (0 or 1) value
+    categories = categories[~(categories == 2).any(axis=1)]
+
     # drop the original categories column from `df`
     df.drop(['categories'], inplace=True, axis=1)
     
